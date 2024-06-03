@@ -47,7 +47,7 @@
                         <% if(locals.userID === message.user_id){ %>
                             <div class="d-flex justify-content-end mb-4">
                                 <% if(message.tutor){ %>
-                                    <div class="msg_cotainer_send" style="width: 250px; background-color: yellow;">
+                                    <div class="msg_cotainer_send" style="min-width: 250px; width: 40%; background-color: yellow;">
                                         <%= message.message %>
                                         <span class="msg_time"><span><%= message.name.split(' ')[0] %></span> <span><%= timeStr + ', ' + dateStr %></span></span>
                                         <form action="/delete-message/<%= message.message_id %>" style="margin: 4px 0;" method="post">
@@ -55,7 +55,7 @@
                                         </form>
                                     </div>
                                 <% } else { %>
-                                    <div class="msg_cotainer_send" style="width: 250px;">
+                                    <div class="msg_cotainer_send" style="min-width: 250px; width: 40%; ">
                                         <%= message.message %>
                                         <span class="msg_time"><span><%= message.name.split(' ')[0] %></span> <span><%= timeStr + ', ' + dateStr %></span></span>
                                         <form action="/delete-message/<%= message.message_id %>" style="margin: 4px 0;" method="post">
@@ -67,7 +67,7 @@
                         <% } else { %>
                             <div class="d-flex justify-content-start mb-4">
                                 <% if(message.tutor){ %>
-                                    <div class="msg_cotainer" style="width: 250px; background-color: yellow;">
+                                    <div class="msg_cotainer" style="min-width: 250px; width: 40%;  background-color: yellow;">
                                         <%= message.message %>
                                         <span class="msg_time"><span><%= message.name.split(' ')[0] %></span> <span><%= timeStr + ', ' + dateStr %></span></span>
                                         <% if (tutor) { %>
@@ -77,7 +77,7 @@
                                         <% } %>
                                     </div>
                                 <% } else { %>
-                                    <div class="msg_cotainer" style="width: 250px;">
+                                    <div class="msg_cotainer" style="min-width: 250px; width: 40%; ">
                                         <%= message.message %>
                                         <span class="msg_time"><span><%= message.name.split(' ')[0] %></span> <span><%= timeStr + ', ' + dateStr %></span></span>
                                         <% if (tutor) { %>
