@@ -48,11 +48,8 @@
                                             </div>
                                         </div>
                                         <div class="resourceInfo">
-                                            <p><b>Email: </b> <%= user.email %></p>
+                                            <p><b>Email: </b> <%= user.email %><b> _ Joined on:</b> <%= (new Date(user.timestamp)).toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }) + ' ' + (new Date(user.timestamp)).toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" }) %></p>
                                         </div>
-                                        <div class="resourceInfo">
-                                            <p><b>Joined on:</b> <%= (new Date(user.timestamp)).toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }) + ' ' + (new Date(user.timestamp)).toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" }) %></p>
-                                        </div>                          
                                     </div>
                                 </div>
                             <% } else { %>
@@ -92,11 +89,8 @@
                                             </div>
                                         </div>
                                         <div class="resourceInfo">
-                                            <p><b>Email: </b> <%= user.email %></p>
+                                            <p><b>Email: </b> <%= user.email %><b> _ Joined on:</b> <%= (new Date(user.timestamp)).toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }) + ' ' + (new Date(user.timestamp)).toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" }) %></p>
                                         </div>
-                                        <div class="resourceInfo">
-                                            <p><b>Joined on:</b> <%= (new Date(user.timestamp)).toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }) + ' ' + (new Date(user.timestamp)).toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" }) %></p>
-                                        </div>                          
                                     </div>
                                 </div>
                             <% } %>
